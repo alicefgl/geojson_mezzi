@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mappa dei luoghi di interesse della Puglia</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Mappa dei Luoghi di Interesse Turistico della Puglia</h1>
+    </header>
+    <button onclick="getLuoghi()" id="bottoneLuoghi">Attrazioni turistiche</button>
+    <button onclick="getMezzi()" id="bottoneMezzi">Mezzi di trasporto</button>
+    <div id="map-container">
+        <div id="coordinates"></div>
+        <div id="map"></div>
+    </div>
+
+    <footer>
+        <button id="download-button" onclick="downloadGeoJSONLuoghi()" style="background-color: white; color: #0056b3;">Download GeoJSON Luoghi</button>
+        <button id="download-button" onclick="downloadGeoJSONMezzi()" style="background-color: white; color: #0056b3;">Download GeoJSON Mezzi</button>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
